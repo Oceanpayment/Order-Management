@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "dcd876d7-8bbb-4583-82ef-d38b0e30e747",
+		"name": "Oceanpayment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27053902"
+	},
+	"item": [
+		{
+			"name": "OrderManagement",
+			"item": [
+				{
+					"name": "Check Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "order_number",
+									"value": "ae866",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "2e27426ca627e4734ca9c43bd18e593c4af1848688486a3c167d39f7f75cf7b2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/check/normal",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"check",
+								"normal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "3bf8550e7773b414a35ac966e5855d8781c5264224dfdb9418f13ceefb79ebda",
+									"type": "text"
+								},
+								{
+									"key": "order_beginDate",
+									"value": "2023-12-25 15:29:42",
+									"type": "text"
+								},
+								{
+									"key": "order_endDate",
+									"value": "2023-12-26 15:29:45",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/QueryOrdersList",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"QueryOrdersList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Business Orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "a54dd863aaa1cabcd7285da666fc7f6fdb92cfd3151334b3e1f271332fe1fc19",
+									"type": "text"
+								},
+								{
+									"key": "order_beginDate",
+									"value": "2023-12-25 15:29:42",
+									"type": "text"
+								},
+								{
+									"key": "order_endDate",
+									"value": "2023-12-26 15:29:45",
+									"type": "text"
+								},
+								{
+									"key": "pages",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/BusinessOrdersList",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"BusinessOrdersList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dispute Order Query",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "a54dd863aaa1cabcd7285da666fc7f6fdb92cfd3151334b3e1f271332fe1fc19",
+									"type": "text"
+								},
+								{
+									"key": "order_beginDate",
+									"value": "2023-12-25 15:29:42",
+									"type": "text"
+								},
+								{
+									"key": "order_endDate",
+									"value": "2023-12-26 15:29:45",
+									"type": "text"
+								},
+								{
+									"key": "pages",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "notice_type",
+									"value": "disputes-period",
+									"type": "text"
+								},
+								{
+									"key": "order_number",
+									"value": "145755",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/DisputeOrderList",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"DisputeOrderList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refund",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "c719beb74b87d4f200a1c9c42aa87d3ecdab6b78aa9f2f4f9a126b16cb1d4a91",
+									"type": "text"
+								},
+								{
+									"key": "payment_id",
+									"value": "231220170723834010513",
+									"type": "text"
+								},
+								{
+									"key": "refund_type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "refund_description",
+									"value": "ProductDamage",
+									"type": "text"
+								},
+								{
+									"key": "refund_amount",
+									"value": "0.1",
+									"type": "text"
+								},
+								{
+									"key": "加签",
+									"value": "1502601502600123112914555414102604111商品瑕疵12345678",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/applyRefund",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"applyRefund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refund Query",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "9aa2eb3fbba5ae6cc151f7d7500c77033cd4ca1d6b92a0fb3ed14cb63e02b226",
+									"type": "text"
+								},
+								{
+									"key": "refund_id",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/queryRefund",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"queryRefund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pre-Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "0ebca4617f30d89bdac0a25cf2033ca920e1f9bece180f904f75efc1c5257735",
+									"type": "text"
+								},
+								{
+									"key": "payment_id",
+									"value": "231220170723834010513",
+									"type": "text"
+								},
+								{
+									"key": "order_amount",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "payment_authType",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-secure.oceanpayment.com/gateway/service/auth",
+							"protocol": "https",
+							"host": [
+								"test-secure",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"gateway",
+								"service",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track Number Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "0ebca4617f30d89bdac0a25cf2033ca920e1f9bece180f904f75efc1c5257735",
+									"type": "text"
+								},
+								{
+									"key": "payment_id",
+									"value": "231220170723834010513",
+									"type": "text"
+								},
+								{
+									"key": "tracking_number",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "tracking_site",
+									"value": "https://17track.net",
+									"type": "text"
+								},
+								{
+									"key": "tracking_handler",
+									"value": "N/A",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-query.oceanpayment.com/service/uploadTrackingNo",
+							"protocol": "https",
+							"host": [
+								"test-query",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"service",
+								"uploadTrackingNo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Void",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "14b420a0660f292dacb54f7d5c790bb80d9175635e47e32956637f50a39e4bc4",
+									"type": "text"
+								},
+								{
+									"key": "order_number",
+									"value": "231220170723834010513",
+									"type": "text"
+								},
+								{
+									"key": "payment_authType",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-secure.oceanpayment.com/gateway/service/auth",
+							"protocol": "https",
+							"host": [
+								"test-secure",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"gateway",
+								"service",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customs Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "995378",
+									"type": "text"
+								},
+								{
+									"key": "terminal",
+									"value": "99537801",
+									"type": "text"
+								},
+								{
+									"key": "signValue",
+									"value": "1f8b244b8c8c6d2e9b3f233b6fee34cc778fa850a5e43aec452a8ce902299855",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "payment_id",
+									"value": "231220170723834010513",
+									"type": "text"
+								},
+								{
+									"key": "pay_userId",
+									"value": "370481199308167756",
+									"type": "text"
+								},
+								{
+									"key": "pay_userName",
+									"value": "aiden",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "total_amount",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "customs",
+									"value": "01",
+									"type": "text"
+								},
+								{
+									"key": "customs_number",
+									"value": "00145",
+									"type": "text"
+								},
+								{
+									"key": "customs_name",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "shipping_fee",
+									"value": "9.9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-secure.oceanpayment.com/gateway/service/customsUpload",
+							"protocol": "https",
+							"host": [
+								"test-secure",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"gateway",
+								"service",
+								"customsUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Health Examination",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "account",
+								"value": "995378",
+								"type": "text"
+							},
+							{
+								"key": "terminal",
+								"value": "99537801",
+								"type": "text"
+							},
+							{
+								"key": "secureCode",
+								"value": "12345678",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account\":\"995378\",\r\n    \"terminal\":\"99537801\",\r\n    \"site\":\"a.com\",\r\n    \"key\":\"e14bc4f890f01a396cde4800be1f808e022ae9a0061acfb11010e9ecd81cd8e214ad108cb7adcb330986c06d48936103fe0689057bec3507d789c0a9d19614fafcea61006e2e8b3b9f761c6dbc04c7e3bb1ab946eec25ed00010c829c87d51133b832618a800baf12c3343bf50e4d79dd0e8d0454172e27446c1a976c5206143\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://test-checkout.oceanpayment.com/pinc/check-account",
+							"protocol": "https",
+							"host": [
+								"test-checkout",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"pinc",
+								"check-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card Bin Verification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "account",
+								"value": "995378",
+								"type": "text"
+							},
+							{
+								"key": "terminal",
+								"value": "99537801",
+								"type": "text"
+							},
+							{
+								"key": "secureCode",
+								"value": "12345678",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account\":\"995378\",\r\n    \"terminal\":\"99537801\",\r\n    \"card_bin\":[411111]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://checkout.oceanpayment.com/pinc/check-card-bin",
+							"protocol": "https",
+							"host": [
+								"checkout",
+								"oceanpayment",
+								"com"
+							],
+							"path": [
+								"pinc",
+								"check-card-bin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
